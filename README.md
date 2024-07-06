@@ -95,6 +95,20 @@ We want to find the senestive data (directory) that the threat actor attempted t
 
 <hr>
 
+<h3>Question 5:</h3>
+<i>Identifying the port utilized by the web shell helps improve firewall configurations for blocking unauthorized outbound traffic. What port was used by the malicious web shell?</i>
+
+<h3>Approach:</h3>
+<br> We want to identify the port in which unuathorized traffic was being sent from. Understanding that a HTTP protocol is a vulnerable protocol becuase the ports that are associated with it ( port like 80, 8000, 8080...etc.) allow for data to be sent as plain text. This allows for threat actors to see unencrypted data. Knowing that WireShark provide filtering options that will allow us to pinpoint where the outbound traffic is coming from will help us mitigate attacks in the future by configuration a firewall for said port. 
+
+<h3>Steps</h3>
+
+<br><b>Step 1:</b>
+
+<br><b>Step 2:</b>
+
+<br><b>Step 3:</b>
+
 
 
 
