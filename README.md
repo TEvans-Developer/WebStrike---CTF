@@ -70,7 +70,7 @@ We want to find if potential vulnerabilities are exploited and to find any malic
 <br> We want to narrow our search to make it easier to find the malicious file that was uploaded to the system. We should input into our display filter <i>ip.src == 117.11.88.124 && http.request.method == POST</i>. This filter is telling us that we want WireShark to find a packet where the source IP is 117.11.88.124 (Threat actor) and (&&) where they made an HTTP req. using the "*POST" method. To futher narrow our search we will navigate to the Edit tab then click "Find Packet". We will then enter "upload" into the filter as a string to be found in our "Packet Details". 
 
 <b> Step 2:</b>
-<br> Two packets will appear. We want to analyize them until we are able to find an upload made by our threat actor. We will right click the packet and follow the HTTP Stream. After analysis we find that in packet 63 our threat actor upload a file <i>image.jpg.php</i>.
+<br> Two packets will appear. We want to analyze them until we are able to find an upload made by our threat actor. We will right click the packet and follow the HTTP Stream. After analysis we find that in packet 63 our threat actor upload a file <i>image.jpg.php</i>.
 ![WebStrickThreatActorFileUpload](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/cfe83f6e-191e-4e88-9787-c3ca36979b01)
 
 <b>Answer: <b><i>image.jpg.php</i>
@@ -84,11 +84,11 @@ We want to find the senestive data (directory) that the threat actor attempted t
 
 <h3>Steps</h3>
 <b>Step 1:</b>
-<br> We first want to understand that the "GET" method is a req. method that allows the retrieval of information from a server as well as where the threat actor is wanting to get this req. from, which is our server. We will input this filter <i>"ip.dst == 24.49.63.79 && http.request.method == GET"</i>. 
+<br> We first want to understand that the "GET" method is a req. method that allows the retrieval of information from a server as well as where the threat actor is wanting to get this req. from, which is our server. We will input this display filter <i>"ip.dst == 24.49.63.79 && http.request.method == GET"</i>. 
 
 
 <br><b>Step 2:</b>
-<br> We then will right- click the packet of interest (Packet 138) then follow the HTTP Stream to see that the threat actor made a "GET" req. to our server to access the <i>/reviews/uploads/</i> od our server.
+<br> We then will right-click the packet of interest (Packet 138) then follow the HTTP Stream to see that the threat actor made a "GET" req. to our server to access the <i>/reviews/uploads/</i> od our server.
 ![WebStrickThreatActorGetReq](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/1af4aeda-091b-46bb-ae6a-ef5d414f0d0c)
 
 <b>Answer:</b><i> /reviews/uploads/</i>
