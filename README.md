@@ -99,15 +99,18 @@ We want to find the senestive data (directory) that the threat actor attempted t
 <i>Identifying the port utilized by the web shell helps improve firewall configurations for blocking unauthorized outbound traffic. What port was used by the malicious web shell?</i>
 
 <h3>Approach:</h3>
-<br> We want to identify the port in which unuathorized traffic was being sent from. Understanding that a HTTP protocol is a vulnerable protocol becuase the ports that are associated with it ( port like 80, 8000, 8080...etc.) allow for data to be sent as plain text. This allows for threat actors to see unencrypted data. Knowing that WireShark provide filtering options that will allow us to pinpoint where the outbound traffic is coming from will help us mitigate attacks in the future by configuration a firewall for said port. 
+<br> We want to identify the port in which unuathorized traffic was being sent from. Understanding that a HTTP protocol is a vulnerable protocol becuase the ports that are associated with it ( ports like 80, 8000, 8080...etc.) allow for data to be sent as plain text. This allows for threat actors to see unencrypted data. Knowing that WireShark provide filtering options that will allow us to pinpoint where the outbound traffic is coming from will help us mitigate attacks in the future by configuration a firewall for said port. 
 
 <h3>Steps</h3>
 
 <br><b>Step 1:</b>
+<br> We first want to filter our packets to make it more observable. We know that that ports such as 80, 8000,8080 are some of the common ports associated with HTTP. In the display filter we will insert "ip.src == 24.49.63.79". 
 
 <br><b>Step 2:</b>
+<br> After doing a slight manual search we can see that there are packets coming from our src. IP address to our threat actor from port 8080.
 
-<br><b>Step 3:</b>
+<br> ![WebStrickThreatActorPort8080](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/fa362144-8b98-4d8d-a833-96b0a052ad4e)
+
 
 
 
