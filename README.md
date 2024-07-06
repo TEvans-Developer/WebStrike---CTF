@@ -82,7 +82,7 @@ We want to find the senestive data (directory) that the threat actor attempted t
 
 <h3>Steps</h3>
 <b>Step 1:</b>
-<br> We first want to understand that the "GET" method is a req. method that allows the retrieval of information from a server as well as where the threat actor is wanting to get this req. from, our server. We will input this filter <i>"ip.dst == 24.49.63.79 && http.request.method == GET"</i>. 
+<br> We first want to understand that the "GET" method is a req. method that allows the retrieval of information from a server as well as where the threat actor is wanting to get this req. from, which is our server. We will input this filter <i>"ip.dst == 24.49.63.79 && http.request.method == GET"</i>. 
 
 
 <br><b>Step 2:</b>
