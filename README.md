@@ -54,11 +54,13 @@
 
 <br><b>Answer:</b><i> Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0</i>
 
+<hr>
+
 <h3>Question 3:</h3>
 <i>We need to identify if there were potential vulnerabilities exploited. What's the name of the malicious web shell uploaded?</i>
 <h3>Approach:</h3>
 
-We want to find if potential vulnerabilities are exploited and to find any malicious data uploaded into the server onces the threat actor gained access. Understanding that WireShark provides filtering options and the ability to follow specific HTTP Stream per packet we can better pin point and find the malicious upload. Knowing different HTTP methods such as *POST, PUT, GET and DELETE will also help. 
+We want to find if potential vulnerabilities are exploited and to find any malicious data uploaded into the server onces the threat actor gained access. Understanding that WireShark provides filtering options and the ability to follow specific HTTP Stream per packet we can better pin point and find the malicious upload. Knowing different HTTP methods such as *POST, PUT, *GET and DELETE will also help. 
 
 <h3>Steps</h3>
 
@@ -71,6 +73,27 @@ We want to find if potential vulnerabilities are exploited and to find any malic
 
 <b>Answer: <b><i>image.jpg.php</i>
 
+<hr>
+<h3>Question 4:</h3>
+<i>Knowing the directory where files uploaded are stored is important for reinforcing defenses against unauthorized access. Which directory is used by the website to store the uploaded files?</i>
+
+<h3>Approach:</h3>
+We want to find the senestive data (directory) that the threat actor attempted to infiltrate. Using the filtering options WireShark provides us and understanding HTTP methods we are able to filter through our packet list to find what directory the threat actor attempted to infiltrate.
+
+<h3>Steps</h3>
+<b>Step 1:</b>
+<br> We first want to understand that the "GET" method is a req. method that allows the retrieval of information from a server as well as where the threat actor is wanting to get this req. from, our server. We will input this filter <i>"ip.dst == 24.49.63.79 && http.request.method == GET"</i>. 
+
+
+<br><b>Step 2:</b>
+<br> We then will right- click the packet of interest (Packet 138) then follow the HTTP Stream to see that the threat actor made a "GET" req. to our server to access the <i>/reviews/uploads/</i> od our server.
+![WebStrickThreatActorGetReq](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/1af4aeda-091b-46bb-ae6a-ef5d414f0d0c)
+
+<b>Answer:</b><i> /reviews/uploads/</i>
+
+<hr>
+
+
 
 
 
@@ -81,6 +104,10 @@ We want to find if potential vulnerabilities are exploited and to find any malic
 <h3>Glossery</h3>
 <b>*Ephemral Port</b> - A temporary port assigned to an endpoint to establish connection with a server application over the internet or LAN.
 
+<br><b>*GET</b> - is a HTTP method used by clients to retrieve data from a server. This method can be used to gain access to server assests like directories, files, functionalities and more.
+
+<br><b>*POST</b> - is a HTTP method used by clients to send data to a server. This method can be used to submit data or file upload. 
+
 <br><b>*User-Agent</b> - is a string that a web browser or other client software sends to a web sever to identify itself. Helps understand what kind of device or software is accessing the sit so they can deliver the appropriate content. 
 
-<b>*POST</b> - is a HTTP method used to by clients to send data to a server. This method can be used to submit data or file upload. 
+ 
