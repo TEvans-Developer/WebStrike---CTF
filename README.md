@@ -1,5 +1,5 @@
 # WebStrike-CTF
-<i>WebStrike</i> is a CTF created by CyberDefender that gives practical hands on experience learning <b>Network Forensic</b>, utilizing tools like <b>WireShark<b>, <b>PCAP</b> analysis and more... 
+<i>WebStrike</i> is a CTF created by CyberDefenders that gives practical hands on experience learning <b>Network Forensic</b>, utilizing tools like <b>WireShark<b>, <b>PCAP</b> analysis and more... 
 <h1>WebStrike CTF</h1>
 <h3>Scenario:</h3>
 <br> An anomaly was discovered within our company's intranet as our Development team found an unusual file on one of our web servers. Suspecting potential malicious activity, the network team has prepared a pcap file with critical network traffic for analysis for the security team, and you have been tasked with analyzing the pcap.
