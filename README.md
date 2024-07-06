@@ -117,10 +117,10 @@ We want to find the senestive data (directory) that the threat actor attempted t
 <h3>Question 6:</h3>
 <br>Understanding the value of compromised data assists in prioritizing incident response actions. What file was the attacker trying to exfiltrate?
 <h3>Approach:</h3>
-<br> We want to know what the threat actors intention was during this attack. We first must understand that there are many different types of sensitive kinds of data that are in a server such as client information, user passwords, finical informtion and more. Using similar methods of investigation as of those used in the previous question we should be able to follow the TCP Stream of the associated packet, manually investigate the stream to see req. or commands made by the threat actor to analyze what they were trying to exfiltrate. 
+<br> We want to know what the threat actors intention was during this attack. We first must understand that there are many different types of sensitive kinds of data that are in a server such as client information, user passwords, financial informtion and more. Using similar methods of investigation as of those used in the previous question we should be able to follow the TCP Stream of the associated packet, manually investigate the stream to see req. or commands made by the threat actor to analyze what they were trying to exfiltrate. 
 <h3>Steps:</h3>
 <br>Step 1:
-<br>With our src. IP in already in our filter ( 24.49.69.79 ) we want to right click packet 200 and follow the TCP Stream. We then will notice towards the bottom of the window that the threat actor mad a "curl -X POST -d " commond in the BASH to download the servers  password file <i>/etc/passwd </i> via HTTP reqest to their IP address. 
+<br>With our src. IP in already in our filter ( 24.49.69.79 ) we want to right click packet 200 and follow the TCP Stream. We then will notice towards the bottom of the window that the threat actor made a "curl -X POST -d " commond in the BASH to download the servers password file <i>/etc/passwd </i> via HTTP reqest to their IP address. 
 
 <br>![WebStrickThreatActorPasswd](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/4c379b55-905a-486f-8f49-03d76c2823b6)
 
@@ -146,7 +146,7 @@ File upload with Malicious Payload(s).
 <br> - Store file handling to ensure stored upload files are outside the web root directory in a secure and restrictd directory with strict permissions.
 <br> - Implement passwords and encyrpt senstive information so it is not easily accessible. 
 <br> - Implement least access privileges to better secure and limit those that have access to sensitive files such as passwords.
-<br> - Implement better secure based coding practices for DEV ops. 
+<br> - Implement better coding practices for DEV ops. 
 <br> - Implement regular security testing and audits for servers and directories. 
 <br> - Implement Firewall configerations to block outbound traffic and automate it to give alerts to a SIEM tools such as SPLUNK or ELK if an event like this occurs.
 <br> - Deny service to the IP address and machine with the information obtained from our Forensics analysis.
