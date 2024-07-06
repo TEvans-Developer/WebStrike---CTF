@@ -27,7 +27,8 @@
 
 <b>Step 3:</b>
 <br>We will then take our threat actors IP address and use an open source tool such as https://www.whatismyip.com/ip-whois-lookup/ to find the region of the threat actor. 
-![WebStrickThreatActorLocation](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/4a64f90a-cd03-43d7-b743-3b320df824f2)
+
+<br>![WebStrickThreatActorLocation](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/4a64f90a-cd03-43d7-b743-3b320df824f2)
 
 <br><b>Answer:</b><i> Tianjin</i>
 <hr>
