@@ -131,10 +131,10 @@ We want to find the senestive data (directory) that the threat actor attempted t
 
 It seems that our threat actors purpose was in infilitrate the network to gain access to senesitive data (passwd) by exploiting a malicious sub-shell upload vulnereability. * HIGH SEVERITY*
 <h3>Tactics</h3>
-<br> File upload exploitation.
+File upload exploitation.
 
 <h3>Techniques</h3>
-<br>File upload with Malicious Payload(s).
+File upload with Malicious Payload(s).
 
 <h3>Procedure</h3>
 <br>The threat actor was able to exploit a vulnerability found in the the websites HTTP req. methods. The threat actor uploaded malicious file named "image.jpg.php" to the system using the "POST" method through an unsecured port (8080) of our server. Once the malicious file was upload to the server the threat actor was able to infiltrate the system. They then navigated to a directory containing password information. The threat actor was then able to make a "curl" command in the command-line interface to download the "passwd" file as an HTTP back to their IP address. 
