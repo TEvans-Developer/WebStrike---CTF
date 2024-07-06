@@ -128,13 +128,29 @@ We want to find the senestive data (directory) that the threat actor attempted t
 
 <hr>
 <h3>Report:</h3>
-<
 
+It seems that our threat actors purpose was in infilitrate the network to gain access to senesitive data (passwd) by exploiting a malicious sub-shell upload vulnereability. * HIGH SEVERITY*
+<h3>Tactics</h3>
+<br> File upload exploitation.
 
+<h3>Techniques</h3>
+<br>File upload with Malicious Payload(s).
 
+<h3>Procedure</h3>
+<br>The threat actor was able to exploit a vulnerability found in the the websites HTTP req. methods. The threat actor uploaded malicious file named "image.jpg.php" to the system using the "POST" method through an unsecured port (8080) of our server. Once the malicious file was upload to the server the threat actor was able to infiltrate the system. They then navigated to a directory containing password information. The threat actor was then able to make a "curl" command in the command-line interface to download the "passwd" file as an HTTP back to their IP address. 
 
-
-
+<h3>Ways to mitigate</h3>
+<br> - Using a secure protocol on a secure port such as HTTPS: 443 for better encrypted data so it is not in plain text (HTTP).
+<br> - Implement input validation and sanitization to check file types, size limitations and to ensure user-supplied content has all malicious characters or sequences removed.
+<br> - Disable PHP execution or other scripting languages are executed in directories where files are uploaded to protect sensitive data 
+<br> - Store file handling to ensure stored upload files are outside the web root directory in a secure and restrictd directory with strict permissions.
+<br> - Implement passwords and encyrpt senstive information so it is not easily accessible. 
+<br> - Implement least access privileges to better secure and limit those that have access to sensitive files such as passwords.
+<br> - Implement better secure based coding practices for DEV ops. 
+<br> - Implement regular security testing and audits for servers and directories. 
+<br> - Implement Firewall configerations to block outbound traffic and automate it to give alerts to a SIEM tools such as SPLUNK or ELK if an event like this occurs.
+<br> - Deny service to the IP address and machine with the information obtained from our Forensics analysis.
+<br> - Inform teams accross departments of the finding to be able to notice intrusions like or similar in the future.
 
 
 <hr>
