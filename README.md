@@ -36,7 +36,7 @@
 <h3>Question 2:</h3>
 <i>Knowing the attacker's user-agent assists in creating robust filtering rules. What's the attacker's user agent?</i>
 <h3>Approach:</h3>
-<br>We want to gain information about the threat actors <b>*User-Agent</b>. Being able to collect this information can help inform us about the type of host operating system, software name; version, details about the device and its capabilites. Understanding that WireShark provide a tool to follow HTTP Stream to analyize the tcp stream going from the user to the server and back. 
+<br>We want to gain information about the threat actors <b>*User-Agent</b>. Being able to collect this information can help inform us about the type of host operating system, software name; version, details about the device and its capabilites. Understanding that WireShark provides a tool to follow HTTP Stream to analyize the tcp stream going from the user to the server and back. 
 <h3>Steps</h3>
 
 <b>Step 1:</b>
