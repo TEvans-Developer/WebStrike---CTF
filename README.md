@@ -1,4 +1,4 @@
-# WebStrike---CTF
+# WebStrike-CTF
 <i>WebStrike</i> is a CTF created by CyberDefender that gives practical hands on experience learning <b>Network Forensic</b>, utilizing tools like <b>WireShark<b>, <b>PCAP</b> analysis and more... 
 <h1>WebStrike CTF</h1>
 <h3>Scenario:</h3>
