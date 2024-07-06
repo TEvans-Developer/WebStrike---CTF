@@ -3,15 +3,19 @@
 <h1>WebStrike CTF</h1>
 <h3>Scenario:</h3>
 <br> An anomaly was discovered within our company's intranet as our Development team found an unusual file on one of our web servers. Suspecting potential malicious activity, the network team has prepared a pcap file with critical network traffic for analysis for the security team, and you have been tasked with analyzing the pcap.
+
 <br>Tools:
+
 <b>-WireShark (PCAP analysis)</b>
+
 <b>-Kali Linux (VM)</b>
 <hr>
 <h3> Question 1:</h3>
 <i> Understanding the geographical origin of the attack aids in geo-blocking measures and threat intelligence analysis. What city did the attack originate from? </i>
 <h3>Approach:</h3>
 <br>We are asked to find the geographical orgin of the threat actor(s). We first must use the items provided in our WireShark tool to identify any anomalies such as large amount of packets traversing our network to an IP address. An IP address is a public base, logical address assigned to a device in a location that allows threat actors' to be routed to the internet. Identifying the threat actors IP address will help aid us in finding the region they are from and help validate that this is our threat actor.
-<h3> Steps:</h3>
+
+<h3>Steps</h3>
 <b>Step 1:</b>
 <br> After setting up our VM in Kali Linux, download the PCAP file, unzip it using the password code provided and open the file in WireShark. 
 <b>Step 2:</b>
