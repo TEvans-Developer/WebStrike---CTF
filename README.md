@@ -111,6 +111,8 @@ We want to find the senestive data (directory) that the threat actor attempted t
 
 <br> ![WebStrickThreatActorPort8080](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/fa362144-8b98-4d8d-a833-96b0a052ad4e)
 
+<b>Answer:</b><i> 8080</i>
+
 <hr>
 <h3>Question 6:</h3>
 <br>Understanding the value of compromised data assists in prioritizing incident response actions. What file was the attacker trying to exfiltrate?
@@ -121,6 +123,8 @@ We want to find the senestive data (directory) that the threat actor attempted t
 <br>With our src. IP in already in our filter ( 24.49.69.79 ) we want to right click packet 200 and follow the TCP Stream. We then will notice towards the bottom of the window that the threat actor mad a "curl -X POST -d " commond in the BASH to download the servers  password file <i>/etc/passwd </i> via HTTP reqest to their IP address. 
 
 <br>![WebStrickThreatActorPasswd](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/4c379b55-905a-486f-8f49-03d76c2823b6)
+
+<b>Answer:</b><i> passwd</i>
 
 <hr>
 <h3>Report:</h3>
