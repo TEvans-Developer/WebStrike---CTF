@@ -18,7 +18,7 @@
 <h3>Steps</h3>
 <b>Step 1:</b>
 <br> After setting up our VM in Kali Linux, download the PCAP file, unzip it using the password code provided and open the file in WireShark. 
-<b>Step 2:</b>
+<br><b>Step 2:</b>
 <br>Upon opening the file we can observe that there are 355 packets. We also observe in our packet list that there is an <b>*Ephemeral Port</b>, <i>43848</i> assigned to an IP address <i>117.11.88.124</i> as the source IP. We want to find unusual amounts of packets being sent to and from different IP addresses. We will navigate to the <b>Statistics</b> tab at the top of WireShark, then navigate to the <b>Conversation</b> tab. Once we are here we will want to navigate to the IPv4 tab and analyize the <b>Address A</b> column and see that out of all our 355 packets in our PCAP file all 355 are being sent either to or from the IP address we identified in our packet list <i>117.11.88.124</i> validating that this is our threat actors IP address.
 
 ![WebStrickThreatActorIP](https://github.com/TEvans-Developer/WebStrike---CTF/assets/140648793/1bc10869-bccc-44a3-b385-291d56444bf0)
